@@ -1,0 +1,19 @@
+<div *ngFor="let category of categorys | keyvalue ">
+  <div class="list">
+    <h1 class="texts">{{category.value}} | {{category.key}}</h1>
+    <span class="example-spacer"></span>
+    <button class="btn-left texts" mat-icon-button aria-label="Example icon button with a open in new tab icon">
+      <mat-icon alt="Ver todos">open_in_new</mat-icon>
+    </button>
+  </div>
+  <div class="container">
+
+    <div class="list"  >
+      <div [ngClass]="category.key !== item.category ? 'hidden' : ''" *ngFor="let item of titles"  >
+        <div class="col-4" *ngIf="category.key === item.category" >
+          <app-poster-new *ngIf="category.key === item.category" [title]="item"></app-poster-new>
+        </div>
+    </div>
+
+  </div>
+</div>

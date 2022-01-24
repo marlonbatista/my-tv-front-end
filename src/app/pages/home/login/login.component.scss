@@ -1,0 +1,63 @@
+.container {
+  height: auto;
+
+  .logo {
+    height: 200px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-white {
+    color: whitesmoke;
+  }
+
+  .center {
+    margin: auto;
+    background-color: #0d1117;
+    width: 350px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid whitesmoke;
+  }
+
+  .btn-submit {
+    background-color: #238636;
+    color: whitesmoke;
+  }
+
+  .btn-submit:hover {
+    background-color: #2d9542;
+  }
+
+  .btn-submit:disabled {
+    background-color: transparent;
+  }
+
+  .link-forgot {
+    float: right;
+    font-size: 12px;
+    text-decoration: none;
+    color: #58a6ff;
+  }
+
+  .card-create-acount {
+
+    margin: 20px auto;
+    border: 2px solid whitesmoke;
+    width: 350px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+
+    .link-create-account {
+      text-decoration: none;
+      color: #58a6ff;
+      font-size: 15px;
+    }
+  }
+
+}
+

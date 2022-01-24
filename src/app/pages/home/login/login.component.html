@@ -1,0 +1,50 @@
+<div class="container">
+  <h4 class="text-center">Login</h4>
+
+  <form class="example-form center" [formGroup]="loginForm" (ngSubmit)="login()">
+    <img class="logo" [src]=logo alt="logo" />
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>E-mail</mat-label>
+      <input type="email" matInput formControlName="email">
+      <mat-hint class="text-white">Ex. pat@example.com</mat-hint>
+      <mat-hint *ngIf="loginForm.hasError('email') && !loginForm.hasError('required')">Errors appear instantly!
+      </mat-hint>
+      <mat-error *ngIf="loginForm.hasError('email') || !loginForm.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="loginForm.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <br/>
+    <br/>
+
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="password">
+      <mat-hint *ngIf="loginForm.hasError('password') && !loginForm.hasError('required')">Errors appear instantly!
+      </mat-hint>
+      <mat-error *ngIf="loginForm.hasError('password') || !loginForm.hasError('required')">
+        Please enter a valid password
+      </mat-error>
+      <mat-error *ngIf="loginForm.hasError('required')">
+        Password is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+
+    <br />
+    <a class="link-forgot" [routerLink]="['forgot-password']">Forgot password?</a>
+    <br />
+
+    <div class="example-button-row">
+      <button class="btn-submit" type="submit" [disabled]="loginForm.invalid" mat-raised-button>Sing in</button>
+    </div>
+  </form>
+
+  <div class="card-create-acount">
+    <span>New to MyTv? <a class="link-create-account" [routerLink]="['/register']"> Create an account.</a></span>
+  </div>
+
+</div>

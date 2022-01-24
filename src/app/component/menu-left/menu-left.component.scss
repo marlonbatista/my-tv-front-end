@@ -1,0 +1,52 @@
+.menu-bar {
+  position: fixed;
+  height: 100%;
+  width: 90%;
+  max-width: 320px;
+  margin: 0;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: -90%;
+  transition: left 0.3s ease-out;
+  z-index: 1;
+  color: whitesmoke;
+}
+
+.active-menu .menu-bar {
+  left: 0;
+}
+
+.active-menu .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.icon-white {
+  color: whitesmoke;
+  font-weight: 300;
+  float: right;
+  margin: 0px 15px;
+}
+
+.img-logo {
+  height: 200px;
+  width: 50%;
+  margin: 0 50px;
+}
+
+.icon {
+  margin: auto 15px;
+}
+
+.text-white {
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  // font-weight: bold;
+  margin: auto 15px;
+}

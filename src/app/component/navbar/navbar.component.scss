@@ -1,0 +1,41 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+.example-icon {
+    padding: 0 14px;
+  }
+
+  .nav-bar{
+      background-color: #000000;
+      color: whitesmoke;
+      font-weight: bold;
+
+      .circle {
+          // border:3px solid #cd36e7;
+          border-radius: 100%;
+          // background: whitesmoke;
+          height: 50px;
+          margin: auto 10px;
+      }
+
+    .example-spacer {
+        flex: 1 1 auto;
+      }
+  }
+
+  .example-container {
+    width: 400px;
+    height: 200px;
+    margin: 12px;
+    border: 1px solid #555;
+  }
+
+  mat-drawer-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+

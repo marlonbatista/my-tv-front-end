@@ -1,0 +1,48 @@
+<div class="container">
+
+  <form class="form-register example-container" [formGroup]="registerForm" (ngSubmit)="createUser()">
+    <div class="form-register_round">
+      <img class="form-register_img" [src]="logo" alt="Logo do mytv" />
+    </div>
+
+    <br />
+
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Name</mat-label>
+      <input type="text" matInput formControlName="name">
+      <mat-hint class="warning" *ngIf="registerForm.controls.name.invalid && !registerForm.controls.name.pristine"
+        class="text-white">Insert a username valid</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>E-mail</mat-label>
+      <input type="email" matInput formControlName="email">
+      <mat-hint class="text-white" *ngIf="registerForm.controls.email.pristine">email@exmaple.com</mat-hint>
+      <mat-hint class="warning" *ngIf="registerForm.controls.email.invalid && !  registerForm.controls.email.pristine"
+        class="text-white">Insert a email valid</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="password">
+      <mat-hint class="text-white"
+        *ngIf="registerForm.controls.password.valid && !registerForm.controls.password.pristine">The password should has
+        min 8 caracters</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Confirm Password</mat-label>
+      <input type="password" matInput formControlName="confPassword">
+      <mat-hint class="text-white"
+        *ngIf="(registerForm.errors?.passwordValid) && (!registerForm.controls.password.pristine && !registerForm.controls.confPassword.pristine)">
+        The password and confirm password is not equals
+      </mat-hint>
+    </mat-form-field>
+
+    <div class="example-button-row">
+      <button class="btn-submit" type="submit" [disabled]="registerForm.errors?.passwordDifferent" mat-raised-button>Sing up</button>
+    </div>
+
+  </form>
+
+</div>

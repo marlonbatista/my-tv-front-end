@@ -1,0 +1,19 @@
+<mat-toolbar class="nav-bar">
+  <mat-toolbar-row>
+      <img class="circle" [src]="logo" alt="logo" (click)="menu.openMenu()"/>
+
+      <span class="title">My TV</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button (click)="goHome()">
+          <mat-icon class="example-icon" aria-hidden="false"
+              aria-label="Example heart icon">home</mat-icon>
+      </button>
+      <button mat-icon-button (click)="logout()">
+          <mat-icon class="example-icon" aria-hidden="false"
+              aria-label="Example delete icon" >exit_to_app</mat-icon>
+      </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<app-menu-left #menu></app-menu-left>

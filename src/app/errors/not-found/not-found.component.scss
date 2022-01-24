@@ -1,0 +1,13 @@
+#body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  color: whitesmoke;
+  text-shadow: 1px 1px 1px #000; ;
+  
+  .text-center {
+      text-align: center;   
+  }
+}

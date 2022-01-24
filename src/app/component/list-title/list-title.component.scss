@@ -1,0 +1,25 @@
+.text-white{
+  color: white;
+}
+
+.container {
+  margin: 0px 20px;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+
+  .texts {
+    margin: 10px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  // .col-4 {
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
+}
+

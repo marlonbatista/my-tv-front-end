@@ -1,0 +1,16 @@
+<div [ngClass]="{'active-menu': showMenu}">
+  <div class="menu-bar">
+    <mat-icon class="icon-white" (click)="openMenu()">close</mat-icon>
+    <img class="img-logo" [src]="logo" alt="Logo My Tv" />
+    <mat-selection-list #shoes [multiple]="false">
+      <mat-list-option class="list-option" *ngFor="let item of   menuList; " [value]="item">
+        <a [routerLink]="[item.route]">
+          <mat-icon class="example-icon icon text-white" aria-hidden="false">{{item.icon}}</mat-icon>
+          <span class="text-white">{{item.name}}</span>
+        </a>
+      </mat-list-option>
+    </mat-selection-list>
+  </div>
+
+  <div class="overlay" (click)="openMenu()"></div>
+</div>

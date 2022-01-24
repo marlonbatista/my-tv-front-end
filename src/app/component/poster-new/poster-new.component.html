@@ -1,0 +1,18 @@
+<mat-card  class="example-card card">
+  <img class="card-img" mat-card-image [src]="title.poster" alt="">
+  <mat-card-content>
+    <mat-card-title class="title">{{title.name}}</mat-card-title>
+    <mat-card-subtitle class="subtitle">{{title.secondName}}</mat-card-subtitle>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="warn">LIKE</button>
+    <button mat-flat-button color="accent">SHARE</button>
+  </mat-card-actions>
+</mat-card>
+<ng-template #listaVazia>
+  <p>Nenhum {{title.category}} encontrado</p>
+</ng-template>
+
+<!-- ngIf="title.poster !== ''; else listaVazia" -->
+
+
